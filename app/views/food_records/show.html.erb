@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @food_record.name %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @food_record.points %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @food_record.weight %>
+</p>
+
+<%= link_to 'Edit', edit_food_record_path(@food_record) %> |
+<%= link_to 'Back', food_records_path %>

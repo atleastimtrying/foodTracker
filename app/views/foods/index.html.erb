@@ -1,0 +1,28 @@
+<% Person.all.each do |person| %>
+  <h2><%= person.name %> ( <%= person.points_remaining %> points remaining)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Points</th>
+        <th>Weight</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% person.foods.each do |food| %>
+        <tr>
+          <td><%= food.name %></td>
+          <td><%= food.points %></td>
+          <td><%= food.weight %></td>
+          <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'add food', new_person_food_path(person) %>
+<% end %>
+

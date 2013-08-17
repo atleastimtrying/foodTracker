@@ -1,0 +1,11 @@
+<%= form_for(@food_record) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :points %>
+  <%= f.number_field :points %>
+  <%= f.label :weight, 'Weight (g)' %>
+  <%= f.number_field :weight %>
+  <p>
+    <%= f.submit 'Create Common Food', class: 'btn' %>
+  </p>
+<% end %>

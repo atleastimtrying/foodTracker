@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FoodTracker</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <p id="notice"><%= notice %></p>  
+  <nav>
+    <% Person.all.each do |person| %>
+      <%= link_to person.name, person %>
+    <% end %>
+    <%= link_to 'Common foods', food_records_path %>
+  </nav>
+  <article>
+    <%= yield %>
+  </article>
+</body>
+</html>
