@@ -1,5 +1,4 @@
 <%= select_tag :name, options_for_select(items_collection_as_options(@food_records)), class: 'options' %>
-<%= link_to 'Fill fields below', '#', class: 'fill btn' %>
 
 <%= form_for [@person, @food] do |f| %>
   <%= f.label :name %>

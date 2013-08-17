@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 ready = ->
-  $('.fill').click ->
+  $('select#name').change ->
     option = $ 'option:selected'
     $('#food_name').val option.html()
     $('#food_points').val option.data 'points'
