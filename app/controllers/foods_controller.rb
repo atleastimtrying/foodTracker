@@ -60,7 +60,8 @@ class FoodsController < ApplicationController
   def destroy
     @food.destroy
     respond_to do |format|
-      format.html { redirect_to foods_url }
+      @person = Person.find(params[:person_id])
+      format.html { redirect_to @person }
       format.json { head :no_content }
     end
   end
