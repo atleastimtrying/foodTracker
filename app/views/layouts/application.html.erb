@@ -10,8 +10,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <p id="notice"><%= notice %></p>  
+<body>  
   <nav>
     <% Person.all.each do |person| %>
       <%= link_to person.name, person %>
