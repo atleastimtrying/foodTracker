@@ -14,7 +14,7 @@
       <tr>
         <td><%= weight.created_at.to_formatted_s(:long) %></td>
         <td><%= weight.weight %>kg</td>
-        <td><%= link_to 'delete', person_weight_path(@person, weight), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn delete' %></td>
+        <td><%= link_to 'x', person_weight_path(@person, weight), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn delete' %></td>
       </tr>
     <% end %>
   </tbody>

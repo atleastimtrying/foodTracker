@@ -8,6 +8,7 @@
         <th>Name</th>
         <th>Points</th>
         <th>Weight</th>
+        <th></th>
       </tr>
     </thead>
 
@@ -18,6 +19,7 @@
           <td><%= food.name %></td>
           <td><%= food.points %></td>
           <td><%= food.weight %>g</td>
+          <td><%= link_to 'x', person_food_path(@person, food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn delete' %></td>
         </tr>
       <% end %>
     </tbody>

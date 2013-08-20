@@ -1,4 +1,7 @@
-<h1>Common Foods</h1>
+<h1>
+  Common Foods
+  <%= link_to 'New Common Food', new_food_record_path, class: 'btn common' %>
+</h1>
 
 <table>
   <thead>
@@ -15,10 +18,9 @@
       <tr>
         <td><%= food_record.name %></td>
         <td><%= food_record.points %></td>
-        <td><%= food_record.weight %>g</td>
-        <td><%= link_to 'delete', food_record, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn delete' %></td>
+        <td><%= food_record.weight %></td>
+        <td><%= link_to 'x', food_record, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn delete' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to 'New Common Food', new_food_record_path, class: 'btn' %>

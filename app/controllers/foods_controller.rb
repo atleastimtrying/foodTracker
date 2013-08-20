@@ -15,7 +15,7 @@ class FoodsController < ApplicationController
   # GET /foods/new
   def new
     @person = Person.find(params[:person_id])
-    @food_records = FoodRecord.all
+    @food_records = FoodRecord.all.order('name asc')
     @food = Food.new
   end
 
