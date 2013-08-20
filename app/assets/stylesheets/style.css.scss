@@ -159,3 +159,32 @@ select{
   display:block;
   -webkit-appearance: none;
 }
+
+@media all and (max-width: 650px){
+  article{
+    border-radius:0;
+    margin-bottom:0;
+  }
+}
+@media all and (max-width: 450px){
+  .common{
+    float:none;
+    display: block;
+    padding: 12px;
+    text-align: center;
+    margin: 8px 0 16px;
+  }
+}
+@media all and (max-width: 375px){
+  article{
+    padding: 16px 0;
+  }
+  section{
+    border-radius:0;
+  }
+}
+@media all and (max-width: 325px){
+  section{
+    padding: 8px 4px;
+  }
+}
