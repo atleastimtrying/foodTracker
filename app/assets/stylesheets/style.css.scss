@@ -20,15 +20,18 @@ article{
 }
 nav{
   background:#333;
-  padding:8px;
+  padding:4px 20px;
+  font-size:0;
 }
 nav a{
   display:inline-block;
   padding: 8px;
   background:white;
   border-radius:4px;
+  font-size:16px;
   text-decoration: none;
   transition:background 0.5s ease-out;
+  margin: 4px;
 }
 nav a:hover{
   background:#A7C2A3;
@@ -58,14 +61,14 @@ nav a:hover{
 .delete:hover{
   background:#d44;
 }
-.common{
+.add{
   background:#6d6;
   color:white;
   float:right;
   font-size:16px;
   line-height:16px;
 }
-.common:hover{
+.add:hover{
   background:#4d4;
 }
 h1{
@@ -123,16 +126,7 @@ td:first-child{
 p.right{
   text-align: right;
 }
-section{
-  border-radius:4px;
-  background:#bebebe;
-  clear:both;
-  margin-bottom:24px;
-  padding:16px;
-}
-section:last-child{
-  margin-bottom:0;
-}
+
 label{
   margin-bottom:8px;
   display:block;
@@ -167,7 +161,7 @@ select{
   }
 }
 @media all and (max-width: 450px){
-  .common{
+  .add{
     float:none;
     display: block;
     padding: 12px;
@@ -175,16 +169,11 @@ select{
     margin: 8px 0 16px;
   }
 }
-@media all and (max-width: 375px){
-  article{
-    padding: 16px 0;
-  }
-  section{
-    border-radius:0;
-  }
-}
 @media all and (max-width: 325px){
-  section{
-    padding: 8px 4px;
+  article{
+    padding:16px;
+  }
+  nav{
+    padding:8px 12px;
   }
 }

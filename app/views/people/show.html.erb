@@ -1,35 +1,31 @@
-<h1><%= @person.name %></h1>
-<section>
-  <h3><%= @person.points_remaining %> points remaining.</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Time</th>
-        <th>Name</th>
-        <th>Points</th>
-        <th>Weight</th>
-        <th></th>
-      </tr>
-    </thead>
+<h1>
+  <%= @person.name %>
+  <%= link_to 'Add Food', new_person_food_path(@person), class: 'btn add' %>
+</h1>
+<h3><%= @person.points_remaining %> points remaining.</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Name</th>
+      <th>Points</th>
+      <th>Weight</th>
+      <th></th>
+    </tr>
+  </thead>
 
-    <tbody>
-      <% @food.each do |food| %>
-        <tr>
-          <td><%= food.created_at.to_formatted_s(:time) %></td>
-          <td><%= food.name %></td>
-          <td><%= food.points %></td>
-          <td><%= food.weight %>g</td>
-          <td><%= link_to 'x', person_food_path(@person, food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn delete' %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <p class="right">
-    <%= link_to 'Add Food', new_person_food_path(@person), class: 'btn' %>
-  </p>
-</section>
-<section>
-  <h3>Weight: <%= @person.weight %> kg</h3>
-  <%= link_to 'Enter Weight', new_person_weight_path(@person), class: 'btn' %>
-  <%= link_to 'Weight History', person_weights_path(@person), class: 'btn' %>
-</section>
+  <tbody>
+    <% @food.each do |food| %>
+      <tr>
+        <td><%= food.created_at.to_formatted_s(:time) %></td>
+        <td><%= food.name %></td>
+        <td><%= food.points %></td>
+        <td><%= food.weight %>g</td>
+        <td><%= link_to 'x', person_food_path(@person, food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn delete' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<h3>Weight: <%= @person.weight %> kg</h3>
+<%= link_to 'Enter Weight', new_person_weight_path(@person), class: 'btn' %>
+<%= link_to 'Weight History', person_weights_path(@person), class: 'btn' %>
