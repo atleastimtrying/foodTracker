@@ -20,7 +20,7 @@
         <td><%= food.created_at.to_formatted_s(:time) %></td>
         <td><%= food.name %></td>
         <td><%= food.points %></td>
-        <td><%= food.weight %>g</td>
+        <td><%= food.weight %></td>
         <td><%= link_to 'x', person_food_path(@person, food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn delete' %></td>
       </tr>
     <% end %>
@@ -29,3 +29,4 @@
 <h3>Weight: <%= @person.weight %> kg</h3>
 <%= link_to 'Enter Weight', new_person_weight_path(@person), class: 'btn' %>
 <%= link_to 'Weight History', person_weights_path(@person), class: 'btn' %>
+<%= link_to 'Edit', edit_person_path(@person), class: 'btn' %>
